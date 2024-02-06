@@ -20,4 +20,12 @@ void loop() {
   digitalWrite(trigPin, LOW);
 
   duration = pulseIn(echoPin, HIGH);
+  distanceCm = duration * 1/58;
+  distanceInch = duration * 1/148;
+  Serial.print("Distance: ");
+  Serial.print(distanceCm);
+  Serial.print(" cm/");
+  Serial.print(distanceInch);
+  Serial.println(" in");
+  delay(1000);
 }
